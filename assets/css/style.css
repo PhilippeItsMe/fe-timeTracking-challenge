@@ -11,11 +11,14 @@
 /*--------------------------------------------Colorimetry*/
 
 :root {
+    /*Primary color*/
     --offwhite: #fafafa;
-    --verydeepblue: #0E1323;
-    --deeplue: #1C204B;
-    --normalblue: #5747EA;
-    --lightblue: #55C2E6;
+
+    --darknavyblue: #0E1323;
+    --navyblue: #1C204B;
+    --lightnavyblue: #5747EA;
+
+    /*Secondary color*/
     --darkborange: #D96C47;
     --orange: #FF8B64;
     --darkblue: #3F9CBB;
