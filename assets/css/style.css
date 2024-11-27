@@ -1,0 +1,30 @@
+@import url('https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap');
+
+/*--------------------------------------------Margin, padding & box-sizing reseting*/
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+/*--------------------------------------------Colorimetry*/
+
+:root {
+    --offwhite: #fafafa;
+    --verydeepblue: #0E1323;
+    --deeplue: #1C204B;
+    --normalblue: #5747EA;
+    --lightblue: #55C2E6;
+    --darkborange: #D96C47;
+    --orange: #FF8B64;
+    --darkblue: #3F9CBB;
+    --blue: #55C2E6;
+
+
+
+
+
+}
+
+/*--------------------------------------------Typographie*/
