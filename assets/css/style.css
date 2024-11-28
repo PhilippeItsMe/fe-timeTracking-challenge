@@ -15,25 +15,16 @@
     --darknavyblue: #0E1323;
     --navyblue: #1C204B;
     --lightnavyblue: #5747EA;
+    --ultralightnavyblue: #7078C9;
+
     --offwhite: #fafafa;
 
     /*Secondary color*/
-    --darkborange: #D96C47;
     --orange: #FF8B64;
-
-    --darkblue: #3F9CBB;
     --blue: #55C2E6;
-
-    --darkpink: #F04667;
     --pink: #FF5E7D;
-
-    --darkgreen: #29BA66;
     --green: #4BCF82;
-
-    --darkpurple: #5A1CBB;
     --purple: #7335D2;
-
-    --darkyellow: #E6A532;
     --yellow: #F1C75B;
 }
 
@@ -54,11 +45,10 @@ h1 {
 h2 {
     font-size: 1rem;
     font-weight: 300;
-
 }
 
 .inactive {
-    color: var(--lightnavyblue);
+    color: var(--ultralightnavyblue);
 }
 
 p {
@@ -68,7 +58,11 @@ p {
 
 .time-total {
     font-size: 2.5rem;
-    font-weight: 300;
+    font-weight: 100;
+}
+
+.ultra-light-navy-blue {
+    color: var(--ultralightnavyblue)
 }
 
 /*--------------------------------------------Containers*/
@@ -85,7 +79,7 @@ body {
 }
 
 main {
-    background-color: var(--offwhite);
+    background-color: var(--darknavyblue);
     width: 90%;
     margin: 0 auto;
 }
@@ -93,7 +87,7 @@ main {
 
 /*Titel-box*/
 
-#titel-box {
+#title-box {
     position: relative;
 }
 
@@ -119,7 +113,6 @@ main {
     grid-area: portrait;
     align-self: center;
     justify-self: center;
-
 }
 
 #report {
@@ -138,6 +131,8 @@ main {
     height: 5rem;
     position: relative;
     top: -3rem;
+    /*To compensate the space left free by the top -3rem*/
+    margin-bottom: -4rem;
     background-color: var(--navyblue);
     border-radius: 1rem;
     z-index: 10;
@@ -146,4 +141,67 @@ main {
     align-items: end;
     justify-content: space-around;
 
+}
+
+/*Work, play, study... -box*/
+
+.icon-box {
+    background-color: var(--orange);
+    position: relative;
+    bottom: -3rem;
+    /*To compensate the top -3rem space left free*/
+    margin-top: -1rem;
+    height: 5rem;
+    border-radius: 1rem;
+    overflow: hidden;
+    z-index: 10;
+}
+
+.icon {
+    height: 4rem;
+    width: 4rem;
+    position: absolute;
+    right: 1rem;
+    top: -0.5rem;
+}
+
+.data-box {
+    background-color: var(--navyblue);
+    border-radius: 1rem;
+    z-index: 20;
+    padding: 1rem;
+    position: relative;
+    display: grid;
+    grid-template-columns: 2fr 3fr;
+    grid-template-rows: 1fr 1fr;
+    grid-template-areas:
+        "activity three-points"
+        "time-total last-periode-time-total"
+}
+
+.activity {
+    grid-area: activity;
+    align-self: flex-end;
+    margin: 0;
+}
+
+.three-points {
+    grid-area: three-points;
+    align-self: flex-end;
+    justify-self: end;
+    font-size: 1.5rem;
+    margin: 0;
+}
+
+.time-total {
+    grid-area: time-total;
+    align-self: center;
+    margin: 0;
+}
+
+.last-periode-time-total {
+    grid-area: last-periode-time-total;
+    align-self: center;
+    justify-self: end;
+    margin: 0;
 }
