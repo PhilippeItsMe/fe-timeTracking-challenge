@@ -71,9 +71,7 @@ p {
     font-weight: 300;
 }
 
-
 /*--------------------------------------------Containers*/
-
 
 /*Main*/
 
@@ -92,32 +90,60 @@ main {
     margin: 0 auto;
 }
 
-/*Title box*/
 
-#title-box {
-    display: grid;
-    grid-template-columns: 1fr 1fr 1fr;
-    grid-template-areas:
-        "daniel"
-        "jonathan"
-        "jeanette"
-        "patrick"
-        "kira";
+/*Titel-box*/
+
+#titel-box {
+    position: relative;
 }
 
-.portrait {
+#name-box {
+    height: 6rem;
+    position: relative;
+    background-color: var(--lightnavyblue);
+    border-radius: 1rem;
+    z-index: 20;
+    display: grid;
+    grid-template-columns: 1fr 2fr;
+    grid-template-rows: 1fr 1fr;
+    grid-template-areas:
+        "portrait report"
+        "portrait name";
+}
+
+#portrait {
     width: 4rem;
     height: 4rem;
     border-radius: 90%;
     border: 0.15rem solid var(--offwhite);
+    grid-area: portrait;
+    align-self: center;
+    justify-self: center;
+
 }
 
-.name {
-    background-color: var(--lightnavyblue);
-    border-radius: 1rem;
+#report {
+    grid-area: report;
+    align-self: self-end;
+    margin-bottom: 0;
 }
 
-.periode {
+#name {
+    grid-area: name;
+    align-self: self-start;
+    margin-bottom: 0;
+}
+
+#periode-box {
+    height: 5rem;
+    position: relative;
+    top: -3rem;
     background-color: var(--navyblue);
     border-radius: 1rem;
+    z-index: 10;
+    display: flex;
+    flex-direction: row;
+    align-items: end;
+    justify-content: space-around;
+
 }
