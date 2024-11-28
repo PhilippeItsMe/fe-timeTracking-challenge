@@ -1,4 +1,4 @@
-@import url('https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&family=Rubik:ital,wght@0,300..900;1,300..900&display=swap');
 
 /*--------------------------------------------Margin, padding & box-sizing reseting*/
 
@@ -12,22 +12,112 @@
 
 :root {
     /*Primary color*/
-    --offwhite: #fafafa;
-
     --darknavyblue: #0E1323;
     --navyblue: #1C204B;
     --lightnavyblue: #5747EA;
+    --offwhite: #fafafa;
 
     /*Secondary color*/
     --darkborange: #D96C47;
     --orange: #FF8B64;
+
     --darkblue: #3F9CBB;
     --blue: #55C2E6;
 
+    --darkpink: #F04667;
+    --pink: #FF5E7D;
 
+    --darkgreen: #29BA66;
+    --green: #4BCF82;
 
+    --darkpurple: #5A1CBB;
+    --purple: #7335D2;
 
-
+    --darkyellow: #E6A532;
+    --yellow: #F1C75B;
 }
 
 /*--------------------------------------------Typographie*/
+
+h1,
+h2,
+p {
+    font-family: "Rubik", sans-serif;
+    color: var(--offwhite);
+}
+
+h1 {
+    font-size: 1.5rem;
+    font-weight: 100;
+}
+
+h2 {
+    font-size: 1rem;
+    font-weight: 300;
+
+}
+
+.inactive {
+    color: var(--lightnavyblue);
+}
+
+p {
+    font-size: 0.75rem;
+    font-weight: 100;
+}
+
+.time-total {
+    font-size: 2.5rem;
+    font-weight: 300;
+}
+
+
+/*--------------------------------------------Containers*/
+
+
+/*Main*/
+
+body {
+    background-color: var(--darknavyblue);
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    height: 100vh;
+}
+
+main {
+    background-color: var(--offwhite);
+    width: 90%;
+    margin: 0 auto;
+}
+
+/*Title box*/
+
+#title-box {
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    grid-template-areas:
+        "daniel"
+        "jonathan"
+        "jeanette"
+        "patrick"
+        "kira";
+}
+
+.portrait {
+    width: 4rem;
+    height: 4rem;
+    border-radius: 90%;
+    border: 0.15rem solid var(--offwhite);
+}
+
+.name {
+    background-color: var(--lightnavyblue);
+    border-radius: 1rem;
+}
+
+.periode {
+    background-color: var(--navyblue);
+    border-radius: 1rem;
+}
